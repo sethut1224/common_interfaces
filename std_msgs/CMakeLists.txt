@@ -13,7 +13,6 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
-find_package(tcl_msgs REQUIRED)
 
 set(msg_files
   "msg/Bool.msg"
@@ -49,7 +48,7 @@ set(msg_files
 )
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
-  DEPENDENCIES builtin_interfaces tcl_msgs
+  DEPENDENCIES builtin_interfaces
   ADD_LINTER_TESTS
 )
 
